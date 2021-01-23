@@ -8,8 +8,8 @@ namespace Twisted_Sum
     {
         static void Main(string[] args)
         {
-            //TwistedSum.Solution(4);
-            //TwistedSum.Solution(10);
+            TwistedSum.Solution(4);
+            TwistedSum.Solution(10);
             TwistedSum.Solution(12);
         }
     }
@@ -17,9 +17,10 @@ namespace Twisted_Sum
     public class TwistedSum
     {
         public static long ErgebnisSumme { get; set; }
-
         public static long Solution(long n)
         {
+            ErgebnisSumme = 0;
+
             for (var i = 1; i <= n; i++)
             {
                 if (CheckNumberLength(i) == 1)
@@ -42,20 +43,6 @@ namespace Twisted_Sum
             return ErgebnisSumme;
         }
 
-
-        //private long BerechneTeilSumme(long n)
-        //{
-        //    long teilsumme = 0;
-        //    var splitNumber = SplitLongNumbers(n);
-
-        //    foreach (var number in splitNumber)
-        //    {
-        //        teilsumme += number;
-        //    }
-
-        //    return teilsumme;
-        //}
-
         /// <summary>
         /// Trennt Zahlen ab der Größe 10 in ihre Bestandteile auf
         /// </summary>
@@ -63,10 +50,7 @@ namespace Twisted_Sum
         /// <returns>Einstellige Zahlen als Liste</returns>
         private static List<long> SplitLongNumbers(long longNumber)
         {
-            List<long> splitNumber = null;
-
-            //var checkNumber = CheckNumberLength(longNumber);
-
+            List<long> splitNumber = new List<long>();
             var longNumberText = longNumber.ToString().ToCharArray();
 
             //Zweiter Check
