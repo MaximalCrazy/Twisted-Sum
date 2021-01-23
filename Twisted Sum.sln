@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twisted Sum", "Twisted Sum\Twisted Sum.csproj", "{B5784F12-E05E-428C-9159-CD79D8BEE827}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twisted Sum Test", "Twisted Sum Test\Twisted Sum Test.csproj", "{7BCFA376-7599-41CB-AFA1-E1466FFA9712}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5784F12-E05E-428C-9159-CD79D8BEE827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5784F12-E05E-428C-9159-CD79D8BEE827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5784F12-E05E-428C-9159-CD79D8BEE827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5784F12-E05E-428C-9159-CD79D8BEE827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BCFA376-7599-41CB-AFA1-E1466FFA9712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BCFA376-7599-41CB-AFA1-E1466FFA9712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BCFA376-7599-41CB-AFA1-E1466FFA9712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BCFA376-7599-41CB-AFA1-E1466FFA9712}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AB3D23D-8BC5-42DF-99AC-B1A63335FBA8}
+	EndGlobalSection
+EndGlobal
