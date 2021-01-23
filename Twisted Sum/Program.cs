@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Twisted_Sum
 {
@@ -7,17 +8,90 @@ namespace Twisted_Sum
     {
         static void Main(string[] args)
         {
-            TwistedSum.Solution(4);
-            TwistedSum.Solution(10);
+            //TwistedSum.Solution(4);
+            //TwistedSum.Solution(10);
             TwistedSum.Solution(12);
         }
     }
 
     public class TwistedSum
     {
+        public static long ErgebnisSumme { get; set; }
+
         public static long Solution(long n)
         {
-            return 0;
+            for (var i = 1; i <= n; i++)
+            {
+                if (CheckNumberLength(i) == 1)
+                {
+                    ErgebnisSumme += i;
+                }
+                else
+                {
+                    var einstelligeZahlen = SplitLongNumbers(i);
+                    foreach (var zahl in einstelligeZahlen)
+                    {
+                        ErgebnisSumme += zahl;
+                    }
+                }
+                Console.WriteLine("i = " + i);
+                Console.WriteLine("Ergebnis = " + ErgebnisSumme);
+                Console.WriteLine();
+            }
+
+            return ErgebnisSumme;
+        }
+
+
+        //private long BerechneTeilSumme(long n)
+        //{
+        //    long teilsumme = 0;
+        //    var splitNumber = SplitLongNumbers(n);
+
+        //    foreach (var number in splitNumber)
+        //    {
+        //        teilsumme += number;
+        //    }
+
+        //    return teilsumme;
+        //}
+
+        /// <summary>
+        /// Trennt Zahlen ab der Größe 10 in ihre Bestandteile auf
+        /// </summary>
+        /// <param name="longNumber"></param>
+        /// <returns>Einstellige Zahlen als Liste</returns>
+        private static List<long> SplitLongNumbers(long longNumber)
+        {
+            List<long> splitNumber = null;
+
+            //var checkNumber = CheckNumberLength(longNumber);
+
+            var longNumberText = longNumber.ToString().ToCharArray();
+
+            //Zweiter Check
+            if (longNumber >= 10)
+            {
+                foreach (var c in longNumberText)
+                {
+                    long.TryParse(c.ToString(), out var temp);
+                        
+                    splitNumber.Add(temp);
+                }
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            return splitNumber;
+        }
+
+        private static int CheckNumberLength(long longNumber)
+        {
+            var textLongNumber = longNumber.ToString().Length;
+
+            return textLongNumber;
         }
     }
 }
