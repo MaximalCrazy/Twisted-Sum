@@ -8,9 +8,8 @@ namespace Twisted_Sum
     {
         static void Main(string[] args)
         {
-            TwistedSum.Solution(4);
-            TwistedSum.Solution(10);
-            TwistedSum.Solution(12);
+            TwistedSum.Solution(4525);
+            TwistedSum.Solution(1234567890);
         }
     }
 
@@ -35,9 +34,9 @@ namespace Twisted_Sum
                         ErgebnisSumme += zahl;
                     }
                 }
-                Console.WriteLine("i = " + i);
-                Console.WriteLine("Ergebnis = " + ErgebnisSumme);
-                Console.WriteLine();
+                //Console.WriteLine("i = " + i);
+                //Console.WriteLine("Ergebnis = " + ErgebnisSumme);
+                //Console.WriteLine();
             }
 
             return ErgebnisSumme;
